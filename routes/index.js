@@ -1,11 +1,21 @@
 var express = require('express');
 var router = express.Router();
 var nodemailer = require ('nodemailer');
+var novedadesModel = require('../models/novedadesModel');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
+
+router.get('/', async function(req,  res, next) {
+  novedades = await novedadesModel.getNovedades();
+  novedades = novedades.splice(0,5);
+  req.render('index',{
+    novedades    
+  });
+});
+
 
 router.post('/', async (req, res, next)=>{
 
@@ -34,7 +44,7 @@ router.post('/', async (req, res, next)=>{
   
   var info = await transporter.sendMail(obj);
 
-  res. render('index', {
+  res.render('index', {
     message: 'Mensaje enviado correctamente',
   })
 

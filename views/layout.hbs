@@ -36,14 +36,57 @@
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">Menus</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Cafeteria</a></li>
-              <li><a class="dropdown-item" href="#">Cakes y Breakfast</a></li>
+              <li><a class="dropdown-item"  type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Cafeteria</a></li>
+             <li><a class="dropdown-item"  type="button" class="btn btn-warning" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal1">Cakes y Breakfast</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Menu Cafeteria</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="images/menu_cafeteria.jpg" class="card-img" height="1000" right="700">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Volver</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Menu Cakes y Breakfast</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="images/Menu_Cakes _y _Breakfast.jpg" class="card-img" height="1000" right="700">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Volver</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
   <body>
     {{{body}}}
