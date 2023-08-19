@@ -4,14 +4,11 @@ var nodemailer = require ('nodemailer');
 var novedadesModel = require('../models/novedadesModel');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
 router.get('/', async function(req,  res, next) {
-  novedades = await novedadesModel.getNovedades();
-  novedades = novedades.splice(0,5);
-  req.render('index',{
+  
+  var novedades = await novedadesModel.getNovedades();
+  var novedades = novedades.splice(0,5);
+  res.render('index',{
     novedades    
   });
 });

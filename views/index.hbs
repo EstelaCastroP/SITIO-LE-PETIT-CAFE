@@ -53,115 +53,40 @@
 
 <!--inicio novedades-->
 <div class="container">
-    <div id="novedades" class="row align-items-center my-3 offset-lg-0 scroll_section">
-        <h2 class="novedades">Lista de Novedades</h2>
+    <h2 class="novedades">Lista de Novedades</h2>
+    <div id="novedades" class="row row-cols-3 row-cols-md-5 g-4 scroll_section">
 
-        <div class="row align-items-center my-3 offset-lg-0">
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card text-center mb-3 card border-light mb-3">
-                    <img src="images/Novedades 1.jpg" height="350" class="card-img" alt="novedades1">
-                    <div class="card-img-overlay" style="color:rgb(13, 13, 12)">
-                        <div class="d-grid gap-2">
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal2">FRAPPUCCINO TENTACION...</button>
-                        </div>
-
-                        <div class="modal fade" id="exampleModal2" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingredientes</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h3>Frappuccino Tentacion</h3>
-                                        <p>Se prepara a base de café, es un batido frío con leche y el agregado de crema
-                                        batida en la superficie.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Volver</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        {{#each novedades}}
+        <div class="card text-center mb-3 card border-light mb-3" style="margin: 30px">
+            <img src="#" height="350" class="card-img" alt="imagen">
+            <div class="card-img-overlay" style="color:rgb(13, 13, 12)">
+                <div class="d-grid gap-2">
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2{{id}}">{{subtitulo}}</button>
                 </div>
             </div>
+        </div>
+        {{/each}}
 
-
-
-            <div class="col-sm-4 mb-3 mb-sm-0">
-                <div class="card text-center mb-3 card border-light mb-3">
-                    <img src="images/Novedades 2.jpg" height="350" class="card-img" alt="novedades1">
-                    <div id="card" class="card-img-overlay">
-                        <div class="d-grid gap-2">
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal2">SHOT DE LICOR...
-                            </button>
-                        </div>
-                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingredientes</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h3>Shot de Licor</h3>
-                                        <p>Se prepara a base de café y licor de chocolate, con el
-                                            agregado de crema batida en la superficie.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Volver</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+        {{#each novedades}}
+        <div class="modal fade" id="exampleModal2{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card text-center mb-3 card border-light mb-3">
-                    <img src="images/Novedades 3.jpg" height="350" class="card-img" alt="novedades1">
-                    <div id="card" class="card-img-overlay">
-                        <div class="d-grid gap-2">
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal3">LE SURFRAPPE...
-                            </button>
-                        </div>
-                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
-                            aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingredientes</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h3>Le Surfrappe</h3>
-                                        <p>Se prepara a base de café helado, hielo y el agregado de crema
-                                            batida en la superficie.</p>
-
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-bs-dismiss="modal">Volver</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="modal-body">
+                        <h3>{{subtitulo}}</h3>
+                        <p>{{cuerpo}}</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
                     </div>
                 </div>
             </div>
         </div>
+        {{/each}}
     </div>
 </div>
 <!--cierro novedades-->
