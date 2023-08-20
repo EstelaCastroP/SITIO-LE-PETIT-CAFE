@@ -58,7 +58,7 @@
 
         {{#each novedades}}
         <div class="card text-center mb-3 card border-light mb-3" style="margin: 30px">
-            <img src="#" height="350" class="card-img" alt="imagen">
+            <img src="{{imagen}}" height="250" class="card-img" alt="imagen">
             <div class="card-img-overlay" style="color:rgb(13, 13, 12)">
                 <div class="d-grid gap-2">
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal"
@@ -69,16 +69,18 @@
         {{/each}}
 
         {{#each novedades}}
-        <div class="modal fade" id="exampleModal2{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal2{{id}}" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header" style="color:rgb(148, 73, 19)">
                         <h1 class="modal-title fs-5" id="exampleModalLabel">{{titulo}}</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <h3>{{subtitulo}}</h3>
-                        <p>{{cuerpo}}</p>
+                    <div class="modal-body text-center mb-3" style="color:rgb(148, 73, 19)">
+                        <h3 style="font-size:30px">{{subtitulo}}</h3>
+                        <img src="{{imagen}}">
+                        <p style="font-size:20px">{{cuerpo}}</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
@@ -93,7 +95,8 @@
 
 <!--inicio super desayunos-->
 <div class="container">
-    <div id="super-desayunos" class="row align-items-center my-3 offset-lg-0 scroll_section">
+    <div id="super-desayunos" class="row align-items-center my-3 
+     scroll_section">
         <h2 class="novedades">Super Desayunos</h2>
         <p class="hs-desayuno">Solo de Lunes a Sabados de 8.00am a 11.00am.</p>
         <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -105,9 +108,23 @@
                         PROMO "#001"
                     </button>
                 </h2>
-                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <img src="images/desayuno1.jpg" height="350" alt="desayuno1">
+                <div class="container">
+                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="row row-cols-6 row-cols-md-2">
+                                <img src="images/desayuno1.jpg" height="350" alt="desayuno1">
+                                <div class="col row-cols-6 row-cols-md-1" style="font-size:30px">
+                                    <p>DESAYUNO BERLIN</p>
+                                    <ul>
+                                        <li>Tazon de cafe con leche</li>
+                                        <li>Tostadas con queso y salsa</li>
+                                        <li>Huevos revueltos con bacon</li>
+                                        <li>Waffle con nutella y frutas y almendras</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -120,12 +137,27 @@
                         PROMO "#002"
                     </button>
                 </h2>
-                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <img src="images/desayuno2.jpg" height="350" alt="desayuno2">
+                <div class="container">
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="row row-cols-6 row-cols-md-2">
+                                <img src="images/desayuno2.jpg" height="350" alt="desayuno2">
+                                <div class="col row-cols-6 row-cols-md-1" style="font-size:30px">
+                                    <p>DESAYUNO PARISINO</p>
+                                    <ul>
+                                        <li>Licuado de frutas</li>
+                                        <li>Tostadas con queso parmesano</li>
+                                        <li>Huevos revueltos</li>
+                                        <li>Panqueques con crema y frutos rojos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
             <div class="accordion-item">
                 <h2 class="accordion-header">
@@ -136,87 +168,77 @@
                         "#003"
                     </button>
                 </h2>
-                <div id="flush-collapseThree" class="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body">
-                        <img src="images/desayuno3.jpg" height="350" alt="desayuno3">
+                <div class="container">
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <div class="row row-cols-6 row-cols-md-2">
+                                <img src="images/desayuno3.jpg" height="350" alt="desayuno3">
+                                <div class="col row-cols-6 row-cols-md-1" style="font-size:30px">
+                                    <p>DESAYUNO NATURAL</p>
+                                    <ul>
+                                        <li>Cafe y jugo naranja</li>
+                                        <li>Croissant</li>
+                                        <li>Huevos revueltos</li>
+                                        <li>Bandeja de frutas y fiambres</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--cierre desayunos-->
+    <!--cierre desayunos-->
 
-<!--inicio menu-->
-<div class="col-md-4">
-    <div class="modal fade" id="Menus" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="Cafeteria">Ingredientes</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    El "Le Surfrappe" se prepara a base de café helado, hielo y el agregado de crema
-                    batida en la superficie.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Volver</button>
+
+    <!--inicio mapa y formulario-->
+    <div class="container-fluid" style="background-color:rgb(80, 74, 74) ">
+        <div class="row py-3 my-5 scroll_section">
+            <div class="col-md-4 offset-md-1">
+                <h2 id="visitanos">Estamos en..</h2>
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6569.002803345297!2d-58.4253417!3d-34.5914806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca7e3934d30b%3A0xef0a7396e115e0b4!2sCosta%20Rica%203552%2C%20C1176ADB%20CABA!5e0!3m2!1ses!2sar!4v1686246255381!5m2!1ses!2sar"
+                        width="450" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" width="300" height="220" style="border-radius: 8px"
+                        ; allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!--cierre de menu-->
 
-
-
-<!--inicio mapa y formulario-->
-<div class="container-fluid">
-    <div class="row py-3 my-5 scroll_section">
-        <div class="col-md-4 offset-md-1">
-            <h2 id="visitanos">Estamos en..</h2>
-            <div class="mapa">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6569.002803345297!2d-58.4253417!3d-34.5914806!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca7e3934d30b%3A0xef0a7396e115e0b4!2sCosta%20Rica%203552%2C%20C1176ADB%20CABA!5e0!3m2!1ses!2sar!4v1686246255381!5m2!1ses!2sar"
-                    width="450" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" width="300" height="220" style="border-radius: 8px" ;
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </div>
-
-        <div class="col-md-4 mt-0 mt-sm-0">
-            <h2 id="visitanos">Contactanos</h2>
-            <form id="contactanos" class="row g-3" action="/" method="post">
-                <div class="col-md-6">
-                    <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre">
-                </div>
-                <div class="col-md-6">
-                    <label for="apellido" class="form-label">Apellido</label>
-                    <input type="text" class="form-control" id="apellido" name="apellido">
-                </div>
-                <div class="col-12">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email">
-                </div>
-                <div class="col-12">
-                    <label for="tel" class="form-label">Tel</label>
-                    <input type="text" class="form-control" id="tel" placeholder="..." name="tel">
-                </div>
-                <div class="col-12">
-                    <label for="mensaje" class="form-label">Mensaje</label>
-                    <textarea class="form-control" id="mensaje" row="3" name="mensaje">
+            <div class="col-md-7 mt-0 mt-sm-0">
+                <h2 id="visitanos" style="padding-left:5%">Contactanos</h2>
+                <form id="contactanos" class="row g-3" action="/" method="post">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="apellido" class="form-label">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido">
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="email@email.com" name="email">
+                    </div>
+                    <div class="col-12">
+                        <label for="tel" class="form-label">Tel</label>
+                        <input type="text" class="form-control" id="tel" placeholder="..." name="tel">
+                    </div>
+                    <div class="col-12">
+                        <label for="mensaje" class="form-label">Mensaje</label>
+                        <textarea class="form-control" id="mensaje" row="3" name="mensaje">
                     </textarea>
-                </div>
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </div>
-            </form>
-            <p class="mensaje">{{message}}</p>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+                <p class="mensaje">{{message}}</p>
+            </div>
         </div>
     </div>
-</div>
-<!--cierre mapa y formulario-->
+    <!--cierre mapa y formulario-->
